@@ -13,3 +13,8 @@ jobs:
 
       - name: Print
         run: echo Zaza
+      
+      - uses: actions/ckeckout@v3
+      
+      - name: 'Printing folder contents'
+        run: ls
