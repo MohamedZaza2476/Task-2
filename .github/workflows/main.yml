@@ -13,8 +13,6 @@ jobs:
 
       - name: Print
         run: echo Zaza
-      
-      - uses: actions/ckeckout@v3
-      
-      - name: 'Printing folder contents'
-        run: ls
+
+      - name: "Login to Docker hub"
+        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
